@@ -25,8 +25,8 @@ public class FirebaseServices {
     }
 
     public FirebaseServices(){
-        this.auth = auth ;
-        this.fire = fire ;
-        this.storage = storage ;
+        this.auth = FirebaseAuth.getInstance() ;
+        this.fire = FirebaseFirestore.getInstance() ;
+        this.storage = FirebaseStorage.getInstance();
     }
 }
