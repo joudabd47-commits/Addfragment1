@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnAdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etPhoneAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="phone"
+            android:inputType="phone"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="294dp" />
+
+        <EditText
+            android:id="@+id/etLocationAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="location"
+            android:inputType="textPostalAddress"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <EditText
+            android:id="@+id/etNameAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="car name"
+            android:inputType="text"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="114dp" />
+
+        <Button
+            android:id="@+id/btnAddAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="511dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

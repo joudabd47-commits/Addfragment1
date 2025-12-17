@@ -5,13 +5,17 @@ public class Car {
     private String phone ;
     private String photo ;
     private int prise ;
+    private String category ;
+    private String location ;
 
-    public Car(String name , String phone , String photo , int prise)
+    public Car(String name , String phone , String photo , int prise,String category,String location)
     {
      this.name = name;
      this.phone = phone;
      this.photo = photo;
      this.prise = prise;
+     this.category=category;
+     this.location=location;
     }
     public String getName(){
         return name ;
@@ -26,5 +30,7 @@ public class Car {
     {
         return prise ;
     }
+    public String getCategory(){return category;}
+    public String getLocation(){return location;}
 
 }
