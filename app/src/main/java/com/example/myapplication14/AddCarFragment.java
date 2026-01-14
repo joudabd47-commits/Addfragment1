@@ -18,7 +18,7 @@ import com.google.firebase.firestore.DocumentReference;
 
 
 public class AddCarFragment extends Fragment {
-    private EditText etName , etLocation ,etPhone ,etNumPlate , etCategory;
+    private EditText etPrice, etName , etLocation ,etPhone ,etNumPlate , etCategory;
     private Button btnAdd ;
     private FirebaseServices fbs ;
 
@@ -37,6 +37,7 @@ public class AddCarFragment extends Fragment {
     {
         etName =getActivity().findViewById(R.id.etNameAddCarFragment);
         etLocation = getActivity().findViewById(R.id.etLocationAddCarFragment);
+        etPrice = getActivity().findViewById(R.id.etPriceAddCarFragment);
         etPhone= getActivity().findViewById(R.id.etPhoneAddCarFragment);
         etNumPlate=getActivity().findViewById(R.id.etNumPlateAddCarFragment);
         etCategory = getActivity().findViewById(R.id.etCategoryAddCarFragment);
@@ -46,6 +47,7 @@ public class AddCarFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String name,location,phone,numberplate,category;
+                int price = Integer.parseInt(etPrice.getText().toString());
                 name = etName.getText().toString();
                 location = etLocation.getText().toString();
                 phone = etPhone.getText().toString();
@@ -55,12 +57,13 @@ public class AddCarFragment extends Fragment {
                     Toast.makeText(getActivity(), "some fields are empty!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Car car = new Car(name,location,phone,,category,"");
+                Car car = new Car(name,phone, price,category,location,numberplate);
+                // (String name , String phone , String photo , int price,String category,String location,String numberplate)
 
                 fbs.getFire().collection("cars").add(car).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-
+                        // TODO: goto all cars
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

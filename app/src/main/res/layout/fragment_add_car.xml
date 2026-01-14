@@ -55,8 +55,8 @@
             android:ems="10"
             android:hint="number plate"
             android:inputType="number"
-            tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="387dp" />
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="363dp" />
 
         <EditText
             android:id="@+id/etCategoryAddCarFragment"
@@ -66,6 +66,16 @@
             android:hint="category"
             android:inputType="text"
             tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="479dp" />
+            tools:layout_editor_absoluteY="443dp" />
+
+        <EditText
+            android:id="@+id/etPriceAddCarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="price"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="509dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
