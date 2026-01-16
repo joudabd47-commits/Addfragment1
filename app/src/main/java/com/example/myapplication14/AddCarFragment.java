@@ -59,6 +59,7 @@ public class AddCarFragment extends Fragment {
                 }
                 Car car = new Car(name,phone, price,category,location,numberplate);
                 // (String name , String phone , String photo , int price,String category,String location,String numberplate)
+                fbs.getAuth().createUserWithEmailAndPassword(user,pass).
 
                 fbs.getFire().collection("cars").add(car).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
